@@ -1,0 +1,13 @@
+{% extends 'agenda/phone.html' %}
+
+{% block footer %}
+<div>
+    
+    <p>{{ contact.name }}</p>
+    <form action="{% url 'agenda:aphone' contact.id %}" method="POST">{% csrf_token %}
+      
+      {{ form.as_p }}
+        <p><input type="submit" value="Send &rarr;" /></p>
+    </form>
+</div>
+{% endblock %}

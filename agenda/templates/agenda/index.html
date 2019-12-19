@@ -1,0 +1,22 @@
+{% extends 'agenda/base.html' %}
+
+{% block content %}
+<div>
+    
+    
+    
+    {% if request.GET.msg %}
+        <p>{{ request.GET.msg }}</p><!--take query string on template-->
+    {% else %}
+        <p>Hello foreigner</p>
+    {% endif %}
+    <a href="{% url 'agenda:login' %}">login</a>
+    <a href="{% url 'agenda:sign' %}">sign</a>
+    <!--
+        If I want to pass a query string with the url
+        {# <a href="{% url my_videos %}?filter=others&sort=newest">My Videos</a>#}
+    -->
+    
+    
+</div>
+{% endblock %}

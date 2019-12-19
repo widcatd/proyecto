@@ -1,0 +1,9 @@
+{% extends 'agenda/base.html' %}
+
+{% block content %}
+<div>
+    <p>Do you realy want to delete the user {{ contact.name }} ?</p>
+    <a href="{% url 'agenda:confdeluser' contact.id %}">confirm</a>
+    <a href="{% url 'agenda:main' %}">cancel</a>
+</div>
+{% endblock %}
