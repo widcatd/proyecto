@@ -1,4 +1,4 @@
-Django==1.8.5
+Django==2.2.24
 flake8==2.5.2
 mccabe==0.4.0
 pep8==1.7.0
